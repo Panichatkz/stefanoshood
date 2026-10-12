@@ -1,0 +1,19 @@
+# Stefano's Hood - Environment Requirements
+# ------------------------------------------
+PHP >= 8.1
+Extensions:
+- pdo_mysql
+- gd
+- mbstring
+- session
+
+Database:
+- MySQL >= 5.7 or MariaDB >= 10.3
+
+Web Server:
+- Nginx >= 1.18
+
+Frontend Libraries:
+- jQuery 2.2.4
+- jQuery Mobile 1.4.5
+- React.js 18 (via CDN)

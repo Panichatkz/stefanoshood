@@ -1,0 +1,24 @@
+## Local Nginx Setup Guide
+
+Assuming your webroot directory is configured at `/var/www/stefanoshood`:
+
+1. **Clone or Copy files** into your web root directory.
+2. **Configure Nginx Server Block** (`/etc/nginx/sites-available/stefanoshood`):
+   ```nginx
+   server {
+       listen 80;
+       server_name localhost;
+       root /var/www/stefanoshood;
+       index index.php index.html index.htm;
+
+       location / {
+           try_files $uri $uri/ =404;
+       }
+
+       location ~ \.php$ {
+           include snippets/fastcgi-php.conf;
+           fastcgi_pass unix:/var/run/php/php8.1-fpm.sock; # Adjust PHP version as needed
+           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+           include fastcgi_params;
+       }
+   }
