@@ -1,0 +1,13 @@
+JSON
+{
+    "name": "stefano/hood",
+    "description": "Stefano's Hood Social Platform",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

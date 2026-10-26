@@ -9,13 +9,12 @@
     <h3>Setting up...</h3>
 
     <?php
-    require_once 'functions.php';
+    require_once '../src/Functions.php';
 
     createTable('members',
                 'user VARCHAR(16),
-                pass VARCHAR(16),
+                pass VARCHAR(255),
                 INDEX(user(6))');
-
 
     createTable('messages',
                 'id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -27,7 +26,6 @@
                 INDEX(auth(6)),
                 INDEX(recip(6))');
 
-
     createTable('friends',
                 'user VARCHAR(16),
                 friend VARCHAR(16),
@@ -38,7 +36,6 @@
                 'user VARCHAR(16),
                 text VARCHAR(4096),
                 INDEX(user(6))');
-
     ?>
 
     <br>...done.

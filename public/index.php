@@ -4,8 +4,7 @@ require_once 'header.php';
 
 echo "<div class='center'>Welcome to Stefano's Hood,";
 
-if($loggedin) echo " $user, you are logged in";
-
+if(isset($loggedin) && $loggedin) echo " $user, you are logged in";
 else echo 'please sign up or log in';
 
 echo <<<_END

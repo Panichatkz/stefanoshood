@@ -11,3 +11,18 @@ A lightweight, modular social media web application built with PHP, PDO, MySQL, 
 
 ---
 
+## Prerequisites
+- PHP >= 8.1 with PDO MySQL extension
+- Composer
+- Node.js & npm
+- Nginx & MySQL Server
+
+## Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Panichatkz/stefanoshood]
+   cd stefanoshood
+   composer install
+   npm install
+   npm run build
