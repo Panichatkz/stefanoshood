@@ -10,8 +10,9 @@ else echo 'please sign up or log in';
 echo <<<_END
 </div><br>
 </div>
+<div id="react-root"></div>
 <div data-role="footer">
-<h4>Web App from <i><a href='https://github.com/Stafanogituser'
+<h4>Web App from <i><a href='https://github.com/Stefanogituser'
 target='_blank'>A place for me and my hommies</a></i></h4>
 </div>
 </body>

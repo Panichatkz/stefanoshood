@@ -28,7 +28,7 @@ echo <<<_INIT
 <body>
     <div data-role='page'>
         <div data-role='header'>
-            <div id='logo' class='center'>S<img id='cappuccino' src='uploads/cappuccino.gif' alt='Cappuccino'>fano's Hood</div>
+            <div id='logo' class='center'>S<img id='cappuccino' src='/uploads/cappuccino.gif' alt='Cappuccino'>fano's Hood</div>
             <div class='username'>$userstr</div>
         </div>
         <div data-role='content'>

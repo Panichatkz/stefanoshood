@@ -75,9 +75,34 @@ function MessageBoard({ recipient }) {
     );
 }
 
-// Mount to DOM if container exists
-const container = document.getElementById('react-feed-root');
-if (container) {
-    const root = createRoot(container);
-    root.render(<MessageBoard recipient={container.dataset.recipient} />);
+// Mount MessageBoard to DOM if container exists
+const feedContainer = document.getElementById('react-feed-root');
+if (feedContainer) {
+    const root = createRoot(feedContainer);
+    root.render(<MessageBoard recipient={feedContainer.dataset.recipient} />);
+}
+
+
+function App() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div style={{ padding: '15px', background: '#eef2f5', border: '1px dashed #333', margin: '20px 0', textAlign: 'center' }}>
+            <h3>🚀 React is Alive in Stefano's Hood!</h3>
+            <p>Current Counter Value: <strong>{count}</strong></p>
+            <button 
+                onClick={() => setCount(count + 1)}
+                style={{ padding: '8px 16px', background: '#eb8', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}
+            >
+                Click to Increment
+            </button>
+        </div>
+    );
+}
+
+// Mount App counter component to DOM if container exists
+const appContainer = document.getElementById('react-root');
+if (appContainer) {
+    const root = createRoot(appContainer);
+    root.render(<App />);
 }
